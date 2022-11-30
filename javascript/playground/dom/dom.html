@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="changeDom()">Click</button>
+    <ul id="listitem">
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    <h1 id="head1">This is a heading</h1>
+    <img
+      src="https://kognitywnie.pl/wp-content/uploads/2012/10/Avatar1.jpg"
+      alt="Avatar"
+      id="img1"
+      width="100"
+      height="100"
+    />
+    <form>
+      <label>Username</label><input type="text" id="username" name="username" />
+      <label>Password</label>
+      <input type="text" id="password" name="password" />
+    </form>
+    <p id="para1" style="color: yellow" onclick="paraFun(this)">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque voluptatem
+      adipisci, fugiat provident deleniti quia ad saepe voluptatum corporis
+      tempore facilis aliquid at. Iusto, quasi recusandae sunt illum porro
+      atque.
+    </p>
+    <p id="para2" style="color: blue" onclick="paraFun(this)">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
+      excepturi ipsa consequuntur dolores laborum natus libero dolore doloribus
+      aut dignissimos temporibus odit eius vel harum, laudantium minus ipsam
+      tempore illum?
+    </p>
+    <div id="news"></div>
+    <h2 id="head2">Heading1</h2>
+    <script>
+      const changeDom = () => {
+        //document.getElementById("head1").innerHTML = "Pakistan";
+        const t = document.getElementById("head1").innerHTML;
+        const cap = t.toUpperCase();
+        //document.getElementById("head1").innerHTML = cap;
+        document.getElementById("head1").innerHTML = "<u>Pakistan</u>";
+        //changing attributes of tags
+        document.getElementById("img1").width = "200";
+        document.getElementById("img1").height = "200";
+        const username = document.forms[0]["username"].value;
+        const password = document.forms[0]["password"].value;
+        console.log(username, password);
+        document.querySelector("#para1").style.borderTop = " 5px solid red";
+        const p = document.createElement("p");
+        p.id = "123";
+        p.innerHTML = "<u>Singapur<u/>";
+        document.body.appendChild(p);
+        const div = document.getElementById("news");
+        div.appendChild(p);
+        const items = document.getElementById("listitem");
+        const ul1 = document.createElement("li");
+        ul1.textContent = "New Item";
+        items.appendChild(ul1);
+        const h2 = document.getElementById("head2");
+        h2.setAttribute("class", "heading");
+      };
+      const paraFun = (para) => {
+        if (para.id === "para1") {
+          alert("para1");
+        } else alert("para2");
+      };
+    </script>
+  </body>
+</html>
