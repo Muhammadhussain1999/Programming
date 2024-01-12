@@ -139,6 +139,97 @@
 // newArr=arr1.splice(4,3)
 // console.log(newArr)
 // console.log(arr1)
-alert("Hey there!")
-console.log(document)
+// alert("Hey there!")
+// console.log(document)
+
+// const button=document.getElementById("clickButton")
+// const uname=document.getElementById("input-username")
+// const username=document.getElementById("username")
+
+// button.addEventListener("click",()=>{
+//     const val=uname.value
+//     localStorage.setItem("name",val)
+//     location.reload()
+// })
+// window.addEventListener("load",()=>{
+
+// const value=localStorage.getItem("name")
+// username.innerText=value
+// })
+// async function getData(lat,long) {
+//     const response = await fetch(
+//       `http://api.weatherapi.com/v1/current.json?key=9b72252d4c4a4178a3b74516241101&q=${lat},${long}&aqi=yes`
+//     );
+//     return await response.json();
+//   }
+// const getLocation=document.getElementById("user-location")
+// async function gotLocation(position){
+//     const result=await getData(position.coords.latitude,position.coords.longitude)
+//     console.log(result)
+
+// }
+// function failedLocation(){
+//     console.log("There is some issue")
+// }
+
+// getLocation.addEventListener("click", async()=>{
+//     navigator.geolocation.getCurrentPosition(gotLocation,failedLocation)
+// })
+// const button=document.getElementById("stop-button")
+// function showTime(){
+//     const currentTime= new Date()
+//     const time=`${currentTime.getHours()}:${currentTime.getMinutes()}:${currentTime.getSeconds()}`
+//     document.getElementById("time").innerText=time
+// }
+// let interval=setInterval(showTime,1000)
+// button.addEventListener("click",()=>{
+//     clearInterval(interval)
+// })
+
+// function main(name){
+
+//     function sayMyName(){
+//         console.log(name)
+//     }
+//     return sayMyName
+// }
+// let fn=main('Muhammad Hussain')
+// fn()
+
+// function adder(num){
+//     function add(b){
+//         console.log(num+b)
+//     }
+//     return add
+// }
+// let added=adder(23)
+// added(2)
+const myName=document.getElementById("my-name")
+const button=document.getElementById("button")
+
+// function makeTextSizer(size){
+//     function changeSize(){
+//         myName.style.fontSize= `${size}px`
+//     }
+//     return changeSize
+// }
+// const text001=makeTextSizer(12)
+
+// button.addEventListener("click",text001)
+
+function makeCounter(){
+    let count=0
+    function increase(){
+        count++
+        console.log(count)
+    }
+    return increase
+}
+const counter1=makeCounter()
+counter1()
+counter1()
+counter1()
+counter1()
+counter1()
+counter1()
 
