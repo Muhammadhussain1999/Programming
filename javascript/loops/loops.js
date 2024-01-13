@@ -204,8 +204,8 @@
 // }
 // let added=adder(23)
 // added(2)
-const myName=document.getElementById("my-name")
-const button=document.getElementById("button")
+// const myName=document.getElementById("my-name")
+// const button=document.getElementById("button")
 
 // function makeTextSizer(size){
 //     function changeSize(){
@@ -217,19 +217,34 @@ const button=document.getElementById("button")
 
 // button.addEventListener("click",text001)
 
-function makeCounter(){
-    let count=0
-    function increase(){
-        count++
-        console.log(count)
-    }
-    return increase
-}
-const counter1=makeCounter()
-counter1()
-counter1()
-counter1()
-counter1()
-counter1()
-counter1()
+// function makeCounter(){
+//     let count=0
+//     function increase(){
+//         count++
+//         console.log(count)
+//     }
+//     return increase
+// }
+// const counter1=makeCounter()
+// counter1()
+// counter1()
+// counter1()
+// counter1()
+// counter1()
+// counter1()
 
+// function add(a,b,c){
+//     return a+b+c
+// }
+// const notCurrying=add(2,3,4)
+// console.log(notCurrying)
+
+function add(a){
+    return function(b)
+    {
+        return function(c){
+            return a+b+c
+        }
+    }
+}
+console.log(add(2)(2))
